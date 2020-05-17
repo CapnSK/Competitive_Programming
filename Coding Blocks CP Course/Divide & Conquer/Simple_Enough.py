@@ -1,5 +1,6 @@
 from math import log,floor
-
+import sys
+sys.setrecursionlimit(sys.getrecursionlimit()*10000)
 def F(n,s,e,ql,qr,debug):
 	if ql>e or qr<s:
 		return 0
