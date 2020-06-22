@@ -1,24 +1,17 @@
-from collections import OrderedDict
 n,k = map(int,input().split())
 convs = list(map(int,input().split()))
 x=[]
-window=OrderedDict()
-chats=0
-for curr_conv in convs:
-	if curr_conv not in window:
-		window[curr_conv]=0
-
-	if window[curr_conv]==0:
-		if chats<=k-1:
-			x.append(curr_conv)
-			window[curr_conv]+=1
-			chats+=1
-
-		if chats==k:
-			window[x[0]]-=1
+size=0
+window={}
+for conv in convs:
+	if conv not in window or not window[conv]:
+		window[conv]=True
+		if size==k:
+			window[x[0]]=False
 			del x[0]
-			x.append(curr_conv)
-			window[curr_conv]+=1
+		elif size<k:
+			size+=1
+		x.append(conv)
 
-print(len(x))
+print(size)
 print(*x[::-1])
