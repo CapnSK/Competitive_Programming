@@ -1,0 +1,1 @@
+#idk I couldn't solve it.. Not even brute solution because it would give tle for sure.
