@@ -26,7 +26,7 @@ def queryRange(BIT,l,r,n):
 	return rV-lV
 
 
-debug=bool(input("Debug mode?: "))
+debug=eval(input("Debug mode?:"))
 n = int(input())
 arr =[0]+ list(map(int,input().split()))
 BIT = [0]*(n+1)
