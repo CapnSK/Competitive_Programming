@@ -2,3 +2,4 @@
 *.pot
 *.pyc
 __pycache+__/
+*.class
